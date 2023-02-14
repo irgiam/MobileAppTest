@@ -6,8 +6,13 @@ const Login = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   const buatAkun = () => {
-    // navigation.navigate('Register');
+    navigation.navigate('Register');
   }
+
+  const onLoginPress = () => {
+    navigation.navigate('Profile');
+  }
+  
   return (
     <View style={styles.container}>
       <Image  source={require('../assets/EDII.jpg')} style={styles.image} />
@@ -21,7 +26,7 @@ const Login = ({ navigation }) => {
         />
       </View>
       <View style={[styles.item, { marginTop: 20 }]}>
-        <Text>Test</Text>
+        <Text>Password</Text>
         <TextInput style={styles.input}
           value={password}
           underlineColorAndroid='#c6c6c6'
@@ -56,7 +61,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   input:{
-    width : "102.5%",
+    width : "100%",
     marginLeft: '-1%'
   },
   image: {
